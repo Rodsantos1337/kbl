@@ -1,0 +1,12 @@
+#!/bin/bash
+LED=/sys/class/leds/rgb:kbd_backlight
+GREEN="167 192 128"
+LOW=40
+if [ "$(cat $LED/brightness)" -gt 0 ]; then
+  echo 0 > $LED/brightness
+  echo "keyboard light: off"
+else
+  echo "$GREEN" > $LED/multi_intensity
+  echo $LOW > $LED/brightness
+  echo "keyboard light: on (everforest green, low)"
+fi
