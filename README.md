@@ -60,6 +60,10 @@ the `modules-load.d` entry above will bring everything up cleanly.
 
 ## Install - final setup
 
+> **Fedora?** Use `sudo ./fedora/install-fedora.sh` instead — see
+> [`fedora/README.md`](fedora/README.md). All Fedora-specific files live in
+> `fedora/`; shared scripts are identical on both distros.
+
 One password (the last one you'll type for this) - covers drivers, modules,
 binaries and sudoers:
 
@@ -105,3 +109,4 @@ Edit the two variables at the top of `kbl-core`, then reinstall:
 *   `kbl` - wrapper: `exec sudo /usr/local/bin/kbl-core` (silent via sudoers)
 *   `kbl-core` - the actual toggle (fixed everforest green config)
 *   `install.sh` - installer + scoped sudoers rule
+*   `fedora/` - Fedora port: `install-fedora.sh` (official Tuxedo repo), `README.md`
